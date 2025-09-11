@@ -6,10 +6,16 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 1.125rem;
   line-height: 1.4;
+  margin: 0;
 }
 
 h1 {
   font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 3rem;
 }
 
 .nav-list {
@@ -51,6 +57,11 @@ hr.resume {
 
 .resume-header {
   text-align: center;
+}
+
+.resume-header.top {
+  background-color: hsl(210, 100%, 96%);
+  padding: 1rem;
 }
 
 .resume-section-title {
@@ -144,6 +155,41 @@ span.highlight {
   margin-bottom: 0;
 }
 
+/* About page */
+.about-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.about-grid-child {
+  border: 1px solid hsl(210, 87%, 80%);
+  padding: 0 1rem;
+}
+
+.about-grid-child h3, .hobbies h3 {
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+
+
+.all-skills {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.hobbies{
+  margin-bottom: 2rem;
+}
+
+.hobby {
+  padding: 0 1rem;
+  box-shadow: 1px 1px 8px 1px hsl(210, 100%, 90%);
+  margin: 2rem 0;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 90%;
@@ -153,6 +199,13 @@ span.highlight {
   .resume-page {
     padding: 3em;
   }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-grid-child:nth-child(1), .about-grid-child:nth-child(4) {
+    grid-column: span 2;
+  }
 }
 
 @media (min-width: 962px) {
@@ -160,12 +213,28 @@ span.highlight {
     width: 80%;
     max-width: 1075px;
   }
-}
 
-blockquote {
-  margin: 2rem 0;
-  border-left: 5px solid #a0a7af;
-  padding-left: 1rem;
-  font-style: italic;
-  font-size: 1.375rem;
+  .about-grid-child:nth-child(1),
+  .about-grid-child:nth-child(4) {
+    grid-column: span 1;
+  }
+  .about-grid-child:nth-child(3) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .hobby {
+    flex: 1;
+    width: 20rem;
+    margin: 0;
+  }
 }
