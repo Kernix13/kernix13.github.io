@@ -27,9 +27,11 @@ function createProjectCards(obj) {
   a.setAttribute('target', '_blank');
   a.setAttribute('href', obj.html_url);
 
-  const projectTitle = obj.name.split('-').map(word => {
-    return `${word[0].toUpperCase()}${word.slice(1)}`
-  }).join(' ');
+  const projectTitle = obj.name
+    .split('-')
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(' ');
+    
   a.append(document.createTextNode(projectTitle));
 
   h3.append(a);
