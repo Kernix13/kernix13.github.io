@@ -60,7 +60,8 @@ hr.resume {
 }
 
 .resume-header.top {
-  background-color: hsl(210, 100%, 96%);
+  background-color: hsl(210, 100%, 97%);
+  // background-color: hsl(56, 80%, 90%);
   padding: 1rem;
 }
 
@@ -119,6 +120,10 @@ span.highlight {
 }
 
 /* Projects page */
+.section {
+  margin-bottom: 2rem;
+}
+
 .grid-container {
   display: grid;
   grid-gap: 2rem;
@@ -130,7 +135,7 @@ span.highlight {
 .project {
   padding: 1rem;
   border: 1px solid hsl(56, 100%, 50%);
-  background-color: hsl(56, 100%, 96%);
+  background-color: #fffeee;
   border-radius: 6px;
 }
 
