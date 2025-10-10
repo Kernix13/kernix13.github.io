@@ -6,7 +6,6 @@ const projectNames = ['typescript-virtual-keyboard', 'guitar-chord-names', 'tarp
 // Fetch data for a user and a specific repo
 async function getUserRepos(userName, repoName) {
   try {
-    // https://api.github.com/repos/${userName}/${repoName}
     const res = await fetch(`https://api.github.com/repos/${userName}/${repoName}`);
     const data = await res.json();
     createProjectCards(data)
