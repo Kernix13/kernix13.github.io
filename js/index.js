@@ -1,7 +1,6 @@
 "use strict"
 
 const gridContainer = document.querySelector('.grid-container');
-const projectNames = ['typescript-virtual-keyboard', 'guitar-chord-names', 'tarp-configs'];
 
 // Fetch data for a user and a specific repo
 async function getUserRepos(userName, repoName) {
@@ -45,6 +44,8 @@ function createProjectCards(obj) {
 
   gridContainer.append(div)
 }
+
+const projectNames = ['typescript-virtual-keyboard', 'guitar-chord-names', 'tarp-configs'];
 
 // Call the fetch function for each repo
 function projects(str, arr) {
